@@ -1,0 +1,9 @@
+<div class='card-deck'>
+    <div *ngFor='let eachSpecialist of  doctorList' class='card'>
+        <div class='card-img-top'><img src="{{doctor}}" alt="Doctor" class='img logo'></div>
+        <div class='card-header'>{{eachSpecialist.doctorName}}</div>
+        <div class='card-body'>{{eachSpecialist.specialization}}</div>
+        <div class='card-footer'>{{eachSpecialist.mobileNumber}}</div>
+    </div>
+
+</div>
