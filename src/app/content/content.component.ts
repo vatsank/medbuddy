@@ -9,6 +9,10 @@ export class ContentComponent implements OnInit {
 
   doctorList: Doctor[];
   doctor = 'assets/images/doctor.jpg';
+  codeNumber = 0;
+  srchResult: string;
+
+
   constructor() {
 
     const  ent = {id: 101, doctorName:
@@ -25,4 +29,8 @@ export class ContentComponent implements OnInit {
   ngOnInit() {
   }
 
+  onChange(val: string): void {
+
+     this.srchResult = val;
+  }
 }

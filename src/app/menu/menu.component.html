@@ -1,7 +1,7 @@
-<nav>
-    <ol>
-        <li *ngFor='let eachLink of linkReferences'>
-            <a [href]='eachLink.linkRef'>{{eachLink.linkText}}</a>
+<nav class='navbar navbar-expand-md bg-dark'>
+    <ul class="navbar-nav">
+        <li *ngFor='let eachLink of linkReferences' class="nav-item">
+            <a [href]='eachLink.linkRef' class="nav-link">{{eachLink.linkText}}</a>
         </li>
-    </ol>
+    </ul>
 </nav>

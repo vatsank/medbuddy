@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
-
+import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -10,6 +10,7 @@ import { ContentComponent } from './content/content.component';
 import { TestimonyComponent } from './testimony/testimony.component';
 import { ShowCatalogComponent } from './show-catalog/show-catalog.component';
 import { MenuComponent } from './menu/menu.component';
+import { FindServiceAreaComponent } from './find-service-area/find-service-area.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,14 @@ import { MenuComponent } from './menu/menu.component';
     ContentComponent,
     TestimonyComponent,
     ShowCatalogComponent,
-    MenuComponent
+    MenuComponent,
+    FindServiceAreaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule ,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
