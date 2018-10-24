@@ -13,6 +13,10 @@ import { MenuComponent } from './menu/menu.component';
 import { FindServiceAreaComponent } from './find-service-area/find-service-area.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { HighLightDirective } from './high-light.directive';
+import { ShowTransactionHistoryComponent } from './show-transaction-history/show-transaction-history.component';
+import { FilterPipe } from './filter.pipe';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -25,13 +29,16 @@ import { LogoutComponent } from './logout/logout.component';
     MenuComponent,
     FindServiceAreaComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    HighLightDirective,
+    ShowTransactionHistoryComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule ,
     HttpClientModule,
-    FormsModule
+    FormsModule, NgxPaginationModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ import { Catalog } from '../catalog';
   selector: 'app-show-catalog',
   templateUrl: './show-catalog.component.html',
   styleUrls: ['./show-catalog.component.css']
+
 })
 export class ShowCatalogComponent implements OnInit {
 

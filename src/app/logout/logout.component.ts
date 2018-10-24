@@ -1,3 +1,4 @@
+import { CompCommunicationService } from './../comp-communication.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: CompCommunicationService) {
+
+   }
 
   ngOnInit() {
   }
 
+  logout() {
+
+    this.service.changeStatus('logout');
+  }
 }

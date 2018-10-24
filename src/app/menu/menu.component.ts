@@ -12,7 +12,11 @@ export class MenuComponent implements OnInit {
    @Input() linkReferences: Pagelink[];
   showLogin = true;
   showLogout = false;
-  constructor(private service: CompCommunicationService) { }
+
+  constructor(private service: CompCommunicationService) {
+
+
+  }
 
   ngOnInit() {
 

@@ -8,7 +8,6 @@ export class CompCommunicationService {
 
   loginStatus: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
-  // currentStatus = this.loginStatus.asObservable();
 
   constructor() {
     }
