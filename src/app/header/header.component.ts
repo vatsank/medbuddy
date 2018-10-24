@@ -1,3 +1,4 @@
+import { Pagelink } from './../pagelink';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,8 +10,14 @@ export class HeaderComponent implements OnInit {
 
   heading = 'Medical Buddy';
   logo = 'assets/images/logo.jpg';
+  links: Pagelink[];
   constructor() {
 
+    this.links = [
+      {linkRef: 'home.html', linkText: 'Home'},
+      {linkRef: 'Dental.html', linkText: 'Dental'}
+
+    ];
    }
 
   ngOnInit() {
