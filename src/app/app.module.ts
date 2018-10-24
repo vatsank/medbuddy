@@ -11,6 +11,8 @@ import { TestimonyComponent } from './testimony/testimony.component';
 import { ShowCatalogComponent } from './show-catalog/show-catalog.component';
 import { MenuComponent } from './menu/menu.component';
 import { FindServiceAreaComponent } from './find-service-area/find-service-area.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FindServiceAreaComponent } from './find-service-area/find-service-area.
     TestimonyComponent,
     ShowCatalogComponent,
     MenuComponent,
-    FindServiceAreaComponent
+    FindServiceAreaComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
