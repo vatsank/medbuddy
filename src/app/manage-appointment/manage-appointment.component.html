@@ -1,0 +1,24 @@
+<div class="col-md-3">
+    <form #f='ngForm' (ngSubmit)='submit(f.value)'>
+        <div class='form-group'>
+            <label for="id">Id</label>
+            <input type="text" name='id' [(ngModel)]='appointment.id' class='form-control'>
+        </div>
+
+        <div class='form-group'>
+            <label for="patientName">Patient Name</label>
+            <input type="text" name='patientName' [(ngModel)]='appointment.patientName' class='form-control'>
+        </div>
+        <div class='form-group'>
+            <label for="appointmentDate">Appointment Date</label>
+            <input type="date" name="date" [(ngModel)]='appointment.date' class='form-control'>
+        </div>
+        <div class='form-group'>
+            <label for="consultation">Consulation For</label>
+            <input type="text" name='consultation' [(ngModel)]='appointment.consultation' class='form-control'>
+        </div>
+        <div class='form-group'>
+            <input type="submit" value='Add' [disabled]='f.invalid' class="btn btn-danger">
+        </div>
+    </form>
+</div>

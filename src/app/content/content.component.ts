@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ShowLocationComponent } from './../show-location/show-location.component';
+import { ComponentAdderService } from './../component-adder.service';
+import { Component, OnInit, ViewChild, ViewContainerRef, TemplateRef } from '@angular/core';
 import {Doctor} from '../doctor';
 @Component({
   selector: 'app-content',
@@ -11,9 +13,11 @@ export class ContentComponent implements OnInit {
   doctor = 'assets/images/doctor.jpg';
   codeNumber = 0;
   srchResult: string;
+  //@ViewChild('temp1', { read: TemplateRef }) temp: TemplateRef<any>;
 
+  @ViewChild('locationInfo', {read: ViewContainerRef}) refToView: ViewContainerRef;
 
-  constructor() {
+  constructor(private adderService:ComponentAdderService) {
 
     const  ent = {id: 101, doctorName:
       'Ramesh', specialization: 'ENT',
@@ -32,5 +36,17 @@ export class ContentComponent implements OnInit {
   onChange(val: string): void {
 
      this.srchResult = val;
+  }
+
+  add(){
+
+    this.adderService.setViewRef(this.refToView);
+    this.adderService.addComponent(ShowLocationComponent);
+
+  }
+
+  ngAfterViewInit(): void {
+
+     //   console.log(this.temp);
   }
 }

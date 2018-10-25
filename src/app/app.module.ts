@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,6 +17,8 @@ import { HighLightDirective } from './high-light.directive';
 import { ShowTransactionHistoryComponent } from './show-transaction-history/show-transaction-history.component';
 import { FilterPipe } from './filter.pipe';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { ShowLocationComponent } from './show-location/show-location.component';
+import { ManageAppointmentComponent } from './manage-appointment/manage-appointment.component';
 
 @NgModule({
   declarations: [
@@ -32,15 +34,18 @@ import {NgxPaginationModule} from 'ngx-pagination';
     LogoutComponent,
     HighLightDirective,
     ShowTransactionHistoryComponent,
-    FilterPipe
+    FilterPipe,
+    ShowLocationComponent,
+    ManageAppointmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule ,
     HttpClientModule,
-    FormsModule, NgxPaginationModule
+    FormsModule, NgxPaginationModule, ReactiveFormsModule
   ],
   providers: [HttpClient],
+  entryComponents: [ShowLocationComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
