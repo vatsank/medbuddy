@@ -1,3 +1,4 @@
+import { FormGroup } from '@angular/forms';
 import { Transaction } from './../transaction';
 import { BuddyAPIService } from './../buddy-api.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,6 +11,8 @@ import { Component, OnInit } from '@angular/core';
 export class ShowTransactionHistoryComponent implements OnInit {
   hisdata: Transaction[];
   srchCondition = '';
+  regForm: FormGroup = new FormGroup({});
+
   p =0;
   constructor(private service:BuddyAPIService) {
 

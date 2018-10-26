@@ -3,5 +3,6 @@
         <td>{{eachItem.id}}</td>
         <td>{{eachItem.description}}</td>
         <td><img src={{eachItem.imageRef}} class='logo'></td>
+        <td><a [routerLink]="['/catalog',eachItem.id]">Show</a></td>
     </tr>
 </table>

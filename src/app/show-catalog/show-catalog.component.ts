@@ -1,6 +1,7 @@
 import { BuddyAPIService } from './../buddy-api.service';
 import { Component, OnInit } from '@angular/core';
 import { Catalog } from '../catalog';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-show-catalog',
@@ -11,10 +12,16 @@ import { Catalog } from '../catalog';
 export class ShowCatalogComponent implements OnInit {
 
   catalog: Catalog[];
-  constructor(private service: BuddyAPIService) { }
+  constructor(private service: BuddyAPIService,private route:ActivatedRoute) { }
 
   ngOnInit() {
 
+    this.route.params.subscribe(rparams =>{
+
+      const catId = rparams['code'];
+
+      console.log(catId);
+    });
   this.service.getCatalog().subscribe(
            resp => this.catalog = resp);
   }

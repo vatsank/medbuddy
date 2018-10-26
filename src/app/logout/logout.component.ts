@@ -1,5 +1,6 @@
 import { CompCommunicationService } from './../comp-communication.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logout',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor(private service: CompCommunicationService) {
+  constructor(private service: CompCommunicationService, private router:Router) {
 
    }
 
@@ -18,5 +19,9 @@ export class LogoutComponent implements OnInit {
   logout() {
 
     this.service.changeStatus('logout');
+
+    sessionStorage.removeItem('status');
+
+    this.router.navigate(['login']);
   }
 }

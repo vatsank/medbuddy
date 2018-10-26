@@ -1,6 +1,7 @@
 import { CompCommunicationService } from './../comp-communication.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
       {label: 'Pass Word', type: 'password', name: 'passWord', constraint: Validators.required}
 
     ];
-  constructor(private service: CompCommunicationService,private builder: FormBuilder) { }
+  constructor(private service: CompCommunicationService, private builder: FormBuilder,
+      private router: Router) { }
 
   ngOnInit() {
 
@@ -33,6 +35,8 @@ export class LoginComponent implements OnInit {
 
       if(uname === 'india' && pword === 'india'){
           this.service.changeStatus('logged');
+          sessionStorage.setItem('status', 'loggeduser');
+          this.router.navigate(['content']);
        }
    }
 }

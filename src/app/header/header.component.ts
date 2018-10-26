@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
 
     this.links = [
       {linkRef: 'content', linkText: 'Home'},
-      {linkRef: 'catalog', linkText: 'Catalog'}
+      {linkRef: 'catalog', linkText: 'Catalog'},
       {linkRef: 'history', linkText: 'View History'},
       {linkRef: 'appointment', linkText: 'Appointments'}
 
