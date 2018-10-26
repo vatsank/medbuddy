@@ -9,6 +9,7 @@ import { Testimony } from '../testimony';
 export class TestimonyComponent implements OnInit {
 
    latest: Testimony[];
+   info: string;
   constructor() {
     this.latest = this.getLatestComments();
   }

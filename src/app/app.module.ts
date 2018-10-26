@@ -22,6 +22,7 @@ import { ManageAppointmentComponent } from './manage-appointment/manage-appointm
 import { MedicineComponent } from './medicine/medicine.component';
 import { ScheduleHComponent } from './schedule-h/schedule-h.component';
 import { SchedulekComponent } from './schedulek/schedulek.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SchedulekComponent } from './schedulek/schedulek.component';
     ManageAppointmentComponent,
     MedicineComponent,
     ScheduleHComponent,
-    SchedulekComponent
+    SchedulekComponent,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
