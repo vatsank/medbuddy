@@ -1,3 +1,6 @@
+import { SchedulekComponent } from './schedulek/schedulek.component';
+import { ScheduleHComponent } from './schedule-h/schedule-h.component';
+import { MedicineComponent } from './medicine/medicine.component';
 import { LogoutComponent } from './logout/logout.component';
 import { LoginComponent } from './login/login.component';
 import { ManageAppointmentComponent } from './manage-appointment/manage-appointment.component';
@@ -12,6 +15,10 @@ const routes: Routes = [
   {path: '',redirectTo:'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'logout', component: LogoutComponent},
+  {path:'medicine',component: MedicineComponent ,children:[
+    {path: 'herbal' , component: ScheduleHComponent, outlet:'herby'},
+    {path: 'indian',  component: SchedulekComponent, outlet: 'indy'}
+  ]},
   {path: 'content', component: ContentComponent , canActivate: [UniversalGuardGuard]},
   {path: 'catalog', component: ShowCatalogComponent , canActivate: [UniversalGuardGuard]},
   {path: 'catalog/:code', component: ShowCatalogComponent , canActivate: [UniversalGuardGuard]},

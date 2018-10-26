@@ -19,6 +19,9 @@ import { FilterPipe } from './filter.pipe';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { ShowLocationComponent } from './show-location/show-location.component';
 import { ManageAppointmentComponent } from './manage-appointment/manage-appointment.component';
+import { MedicineComponent } from './medicine/medicine.component';
+import { ScheduleHComponent } from './schedule-h/schedule-h.component';
+import { SchedulekComponent } from './schedulek/schedulek.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { ManageAppointmentComponent } from './manage-appointment/manage-appointm
     ShowTransactionHistoryComponent,
     FilterPipe,
     ShowLocationComponent,
-    ManageAppointmentComponent
+    ManageAppointmentComponent,
+    MedicineComponent,
+    ScheduleHComponent,
+    SchedulekComponent
   ],
   imports: [
     BrowserModule,
