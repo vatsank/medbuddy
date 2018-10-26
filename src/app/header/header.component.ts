@@ -14,8 +14,11 @@ export class HeaderComponent implements OnInit {
   constructor() {
 
     this.links = [
-      {linkRef: 'home.html', linkText: 'Home'},
-      {linkRef: 'Dental.html', linkText: 'Dental'}
+      {linkRef: 'content', linkText: 'Home'},
+      {linkRef: 'catalog', linkText: 'Catalog'}
+      {linkRef: 'history', linkText: 'View History'},
+      {linkRef: 'appointment', linkText: 'Appointments'}
+
 
     ];
    }
